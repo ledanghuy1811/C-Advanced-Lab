@@ -209,6 +209,7 @@ HuffmanTree makeHuffman(char *buffer,int size)
     {
         // edit node 1
         node1=findMin(Queue);
+        H.root=node1;
         int freq1=jval_i(node1->val);
         int key1=jval_i(node1->key);
         jrb_delete_node(node1);
@@ -229,7 +230,6 @@ HuffmanTree makeHuffman(char *buffer,int size)
         addEdges2(H.graph,mark,key2);
         mark++;
     }
-    // H.root=node1;
     return H;
 }
 
