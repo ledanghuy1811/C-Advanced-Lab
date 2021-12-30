@@ -59,7 +59,9 @@ int main()
     addEdges(graph,3,2,6);
     addEdges(graph,3,7,6);
     addEdges(graph,2,7,19);
-    int s=0,t=7;
+    int s,t;
+    printf("Nhap s-t: ");
+    scanf("%d-%d",&s,&t);
     int lenght,path[MAX];
     memset(path,0,sizeof(path));
     double weight=shortestPath(graph,s,t,path,&lenght);
